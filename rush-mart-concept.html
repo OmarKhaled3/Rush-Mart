@@ -1,0 +1,322 @@
+<!-- Rush Mart - homepage + menu visual concept -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rush Mart - Concept</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://api.fontshare.com/v2/css?f[]=clash-display@600,700&display=swap" rel="stylesheet">
+
+<style>
+  /* ---- LIGHT THEME (default) ---- */
+  :root{
+    --bg:#F7F3EC;
+    --surface:#FFFFFF;
+    --surface-2:#F1EBE0;
+    --ink:#1B1813;
+    --muted:rgba(27,24,19,.55);
+    --line:rgba(27,24,19,.12);
+    --dash:rgba(27,24,19,.18);
+    --red:#C8201B;
+    --red-deep:#A81813;
+    --gold:#D99000;
+    --cta-text:#FFFFFF;
+    --nav-bg:rgba(247,243,236,.78);
+    --disp:'Clash Display','Plus Jakarta Sans',sans-serif;
+    --body:'Plus Jakarta Sans',sans-serif;
+  }
+  /* ---- DARK THEME (follows system setting) ---- */
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#16130F;
+      --surface:#0E0C09;
+      --surface-2:#1D1A15;
+      --ink:#F7F3EC;
+      --muted:rgba(247,243,236,.55);
+      --line:rgba(247,243,236,.12);
+      --dash:rgba(247,243,236,.16);
+      --red:#E0352F;
+      --red-deep:#C01F1A;
+      --gold:#FBC02D;
+      --cta-text:#FFFFFF;
+      --nav-bg:rgba(14,12,9,.72);
+    }
+  }
+  html[dir="rtl"]{ --disp:'IBM Plex Sans Arabic',sans-serif; --body:'IBM Plex Sans Arabic',sans-serif; }
+
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--ink);font-family:var(--body);line-height:1.5;
+    -webkit-font-smoothing:antialiased;overflow-x:hidden;transition:background .3s,color .3s}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 32px}
+  a{color:inherit;text-decoration:none}
+  .eyebrow{font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--muted);font-weight:600}
+  html[dir="rtl"] .eyebrow{letter-spacing:.06em}
+  .bolt{display:inline-block;vertical-align:middle}
+
+  /* nav */
+  nav{position:sticky;top:0;z-index:50;backdrop-filter:blur(12px);
+    background:var(--nav-bg);border-bottom:1px solid var(--line)}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;height:72px}
+  .brand{display:flex;align-items:center;gap:9px;font-family:var(--disp);font-weight:700;font-size:21px;letter-spacing:.01em}
+  .brand .r{color:var(--red)}
+  .nav-links{display:flex;gap:34px;align-items:center}
+  .nav-links a{font-size:14px;color:var(--muted);transition:color .25s}
+  .nav-links a:hover{color:var(--ink)}
+  .nav-right{display:flex;align-items:center;gap:16px}
+  .lang{font-size:12px;font-weight:600;letter-spacing:.08em;color:var(--ink);
+    border:1px solid var(--line);border-radius:999px;padding:8px 14px;cursor:pointer;
+    background:transparent;transition:.25s;font-family:var(--body)}
+  .lang:hover{border-color:var(--red);background:rgba(200,32,27,.08)}
+  .pill{display:inline-flex;align-items:center;gap:9px;border-radius:999px;padding:11px 20px;
+    font-size:14px;font-weight:600;cursor:pointer;transition:.3s;border:none;font-family:var(--body)}
+  .pill-red{background:var(--red);color:var(--cta-text)}
+  .pill-red:hover{background:var(--red-deep)}
+  .pill-ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+  .pill-ghost:hover{border-color:var(--ink)}
+  .arrow{transition:transform .3s}
+  .pill:hover .arrow{transform:translateX(3px)}
+  html[dir="rtl"] .arrow{transform:scaleX(-1)}
+  html[dir="rtl"] .pill:hover .arrow{transform:scaleX(-1) translateX(3px)}
+  @media(max-width:860px){.nav-links{display:none}}
+
+  /* hero */
+  header{position:relative;padding:clamp(70px,11vw,150px) 0 clamp(60px,8vw,110px);overflow:hidden}
+  .hero-bolt{position:absolute;top:50%;inset-inline-end:-4%;transform:translateY(-50%);
+    width:min(560px,52vw);opacity:.06;color:var(--red);pointer-events:none}
+  .hero-grid{position:relative;z-index:2;max-width:860px}
+  h1{font-family:var(--disp);font-weight:700;line-height:.98;letter-spacing:-.02em;
+    font-size:clamp(46px,8vw,108px);margin:22px 0 26px}
+  h1 .light{font-weight:600;color:var(--muted)}
+  h1 .red{color:var(--red)}
+  html[dir="rtl"] h1{letter-spacing:0;line-height:1.1}
+  .lede{font-size:clamp(16px,1.7vw,19px);color:var(--muted);max-width:560px;margin-bottom:38px}
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap}
+
+  /* brand statement */
+  .statement{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--surface)}
+  .statement-inner{padding:clamp(56px,8vw,100px) 0;max-width:880px}
+  .statement h2{font-family:var(--disp);font-weight:600;font-size:clamp(28px,4.4vw,54px);
+    line-height:1.08;letter-spacing:-.01em;margin:18px 0 34px}
+  .statement h2 .red{color:var(--red)}
+  .chips{display:flex;gap:12px;flex-wrap:wrap}
+  .chip{font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:600;color:var(--muted);
+    border:1px solid var(--line);border-radius:999px;padding:9px 16px}
+  html[dir="rtl"] .chip{letter-spacing:.04em}
+
+  /* menu */
+  .menu{padding:clamp(70px,9vw,130px) 0}
+  .menu-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:36px}
+  .menu-head h2{font-family:var(--disp);font-weight:700;font-size:clamp(34px,5vw,64px);letter-spacing:-.02em;line-height:1}
+  .menu-head h2 .red{color:var(--red)}
+  .tabs{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:28px}
+  .tab{font-size:13px;font-weight:600;color:var(--muted);border:1px solid var(--line);border-radius:999px;
+    padding:9px 16px;cursor:pointer;background:transparent;transition:.25s;white-space:nowrap;font-family:var(--body)}
+  .tab:hover{color:var(--ink);border-color:var(--muted)}
+  .tab.on{background:var(--red);color:var(--cta-text);border-color:var(--red)}
+  .board{background:var(--surface);border:1px solid var(--line);border-radius:28px;padding:clamp(26px,4vw,52px);min-height:420px}
+  .board-top{display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid var(--line);
+    padding-bottom:18px;margin-bottom:8px}
+  .board-cat{font-family:var(--disp);font-weight:600;font-size:clamp(20px,2.4vw,28px)}
+  .col-head{display:flex;gap:46px;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);font-weight:600}
+  .col-head span{width:42px;text-align:end}
+  .rows{display:grid;grid-template-columns:1fr;column-gap:64px}
+  @media(min-width:720px){.rows.two{grid-template-columns:1fr 1fr}}
+  .row{display:flex;align-items:baseline;justify-content:space-between;gap:14px;padding:13px 0;border-bottom:1px dashed var(--dash)}
+  .row .name{font-size:15px;font-weight:500}
+  .row .dots{flex:1;border-bottom:1px dotted var(--dash);margin:0 4px;transform:translateY(-4px)}
+  .prices{display:flex;gap:46px}
+  .prices b{width:42px;text-align:end;font-weight:600;font-size:15px;color:var(--ink)}
+  .prices b.l{color:var(--red)}
+  .prices b.na{color:var(--muted);font-weight:400}
+  .board-note{margin-top:20px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:600}
+
+  /* find us */
+  .loc{border-top:1px solid var(--line);padding:clamp(60px,8vw,110px) 0;background:var(--surface)}
+  .loc-inner{display:flex;justify-content:space-between;align-items:center;gap:40px;flex-wrap:wrap}
+  .loc h2{font-family:var(--disp);font-weight:700;font-size:clamp(30px,4.5vw,56px);letter-spacing:-.02em;line-height:1.04;max-width:560px}
+  .loc h2 .red{color:var(--red)}
+  .loc p{color:var(--muted);margin-top:16px;max-width:430px;font-size:16px}
+
+  footer{padding:54px 0;border-top:1px solid var(--line)}
+  .foot-inner{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center;color:var(--muted);font-size:13px}
+
+  .rise{opacity:0;transform:translateY(20px);animation:rise .8s cubic-bezier(.2,.7,.2,1) forwards}
+  .d1{animation-delay:.05s}.d2{animation-delay:.18s}.d3{animation-delay:.3s}.d4{animation-delay:.42s}
+  @keyframes rise{to{opacity:1;transform:none}}
+</style>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="bolt" viewBox="0 0 24 24"><path fill="currentColor" d="M13 2 4.5 13.2c-.4.5 0 1.3.7 1.3H10l-1.6 7.3c-.2.8.8 1.3 1.3.7L19.5 10.8c.4-.5 0-1.3-.7-1.3H13.6L15 2.7c.2-.8-.8-1.3-1.3-.7Z"/></symbol>
+  <symbol id="arr" viewBox="0 0 16 16"><path d="M3 8h8.5M8 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+</svg>
+
+<nav>
+  <div class="wrap nav-inner">
+    <div class="brand"><span class="r">RUSH</span><svg class="bolt" width="18" height="18" style="color:var(--gold)"><use href="#bolt"/></svg><span>MART</span></div>
+    <div class="nav-links">
+      <a href="#menu" data-en="Menu" data-ar="القائمة">Menu</a>
+      <a href="#loc" data-en="Find us" data-ar="زورنا">Find us</a>
+      <a href="#" data-en="About" data-ar="عن رش مارت">About</a>
+      <a href="#" data-en="Careers" data-ar="الوظائف">Careers</a>
+    </div>
+    <div class="nav-right">
+      <button class="lang" id="lang">العربية</button>
+      <!-- Replace href with the exact Google Maps pin URL for the branch -->
+      <a class="pill pill-red" target="_blank" rel="noopener" href="https://maps.google.com/?q=Rush+Mart" data-en="Find us" data-ar="زورنا">Find us
+        <svg class="arrow bolt" width="14" height="14"><use href="#arr"/></svg></a>
+    </div>
+  </div>
+</nav>
+
+<header>
+  <svg class="hero-bolt"><use href="#bolt"/></svg>
+  <div class="wrap hero-grid">
+    <p class="eyebrow rise d1">Grab. Go. Rush.</p>
+    <h1 class="rise d2">
+      <span class="red" data-en="Good coffee," data-ar="قهوة ممتازة،">Good coffee,</span><br>
+      <span class="light" data-en="ready when you are." data-ar="جاهزة وقتما تريد.">ready when you are.</span>
+    </h1>
+    <p class="lede rise d3" data-en="Freshly brewed coffee, fresh bakery, and the daily essentials you actually need. Open around the clock, close to you." data-ar="قهوة طازجة، ومخبوزات طازجة، واحتياجاتك اليومية الأساسية. مفتوح على مدار الساعة، وقريب منك.">Freshly brewed coffee, fresh bakery, and the daily essentials you actually need. Open around the clock, close to you.</p>
+    <div class="hero-cta rise d4">
+      <a href="#menu" class="pill pill-red" data-en="View the menu" data-ar="تصفّح القائمة">View the menu
+        <svg class="arrow bolt" width="14" height="14"><use href="#arr"/></svg></a>
+      <a href="#loc" class="pill pill-ghost" data-en="Find us" data-ar="زورنا">Find us</a>
+    </div>
+  </div>
+</header>
+
+<section class="statement">
+  <div class="wrap statement-inner">
+    <p class="eyebrow" style="color:var(--red)" data-en="Egypt's coffee & convenience brand" data-ar="علامة القهوة والتسوّق السريع في مصر">Egypt's coffee &amp; convenience brand</p>
+    <h2><span data-en="Fresh coffee and daily essentials, made " data-ar="قهوة طازجة واحتياجات يومية، ">Fresh coffee and daily essentials, made </span><span class="red" data-en="fast." data-ar="بسرعة.">fast.</span></h2>
+    <div class="chips">
+      <span class="chip" data-en="Open 24/7" data-ar="مفتوح ٢٤ ساعة">Open 24/7</span>
+      <span class="chip" data-en="Freshly brewed" data-ar="تُحضّر طازجة">Freshly brewed</span>
+      <span class="chip" data-en="Quality you can taste" data-ar="جودة تتذوّقها">Quality you can taste</span>
+    </div>
+  </div>
+</section>
+
+<section class="menu" id="menu">
+  <div class="wrap">
+    <div class="menu-head">
+      <h2><span data-en="The " data-ar="">The </span><span class="red" data-en="Menu" data-ar="القائمة">Menu</span></h2>
+      <p class="eyebrow" data-en="Coffee, iced, frappe, bakery & more" data-ar="قهوة، باردة، فرابيه، مخبوزات والمزيد">Coffee, iced, frappe, bakery &amp; more</p>
+    </div>
+    <div class="tabs" id="tabs"></div>
+    <div class="board">
+      <div class="board-top">
+        <div class="board-cat" id="boardCat">Coffee</div>
+        <div class="col-head" id="colHead"><span>S</span><span>L</span></div>
+      </div>
+      <div class="rows two" id="rows"></div>
+      <div class="board-note" id="boardNote">Prices in EGP</div>
+    </div>
+  </div>
+</section>
+
+<section class="loc" id="loc">
+  <div class="wrap loc-inner">
+    <div>
+      <h2><span data-en="Open " data-ar="مفتوح ">Open </span><span class="red" data-en="24/7" data-ar="٢٤/٧">24/7</span><span data-en=", come find us." data-ar="، تعال زورنا.">, come find us.</span></h2>
+      <p data-en="Our store is open around the clock. Tap below for directions on Google Maps." data-ar="فرعنا مفتوح على مدار الساعة. اضغط بالأسفل للحصول على الاتجاهات على خرائط جوجل.">Our store is open around the clock. Tap below for directions on Google Maps.</p>
+    </div>
+    <a class="pill pill-red" target="_blank" rel="noopener" href="https://maps.google.com/?q=Rush+Mart" data-en="Find us" data-ar="زورنا">Find us
+      <svg class="arrow bolt" width="14" height="14"><use href="#arr"/></svg></a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot-inner">
+    <div class="brand" style="font-size:18px"><span class="r">RUSH</span><svg class="bolt" width="15" height="15" style="color:var(--gold)"><use href="#bolt"/></svg><span>MART</span></div>
+    <span data-en="Grab. Go. Rush. · concept preview" data-ar="اغتنم. انطلق. رش. · معاينة تصميم">Grab. Go. Rush. &middot; concept preview</span>
+  </div>
+</footer>
+
+<script>
+  const MENU = [
+    {id:'coffee', en:'Coffee', ar:'القهوة', cols:['S','L'], items:[
+      ['Mocha',70,100],['White mocha',70,100],['Cappuccino',80,100],['Cortado',null,80],
+      ['Latte',90,110],['Matcha latte',80,110],['Spanish latte',100,120],['Flat white',null,110],
+      ['Macchiato',70,90],['Caramel macchiato',null,110],['American coffee',50,70],['Americano',70,90],
+      ['Espresso single',null,60],['Espresso double',null,80],['Turkish coffee',40,60],['French coffee',45,70]
+    ]},
+    {id:'iced', en:'Iced Coffee', ar:'قهوة باردة', cols:['S','L'], items:[
+      ['Mocha',90,110],['White mocha',80,100],['Caramel macchiato',80,110],
+      ['Cafe americano',60,80],['Cafe latte',65,85],['Spanish latte',100,120]
+    ]},
+    {id:'hot', en:'Hot Beverages', ar:'مشروبات ساخنة', cols:['S','L'], items:[
+      ['Hot chocolate',80,100],['White cocoa',80,100],['Matcha',80,100],
+      ['Honey matcha',90,110],['Spanish matcha',110,130]
+    ]},
+    {id:'frappe', en:'Frappe', ar:'فرابيه', cols:['S','L'], items:[
+      ['Latte',80,100],['Latte flavour',90,110],['Double espresso',70,90],['Mocha',110,130],
+      ['White mocha',80,100],['Spanish latte',110,130],['Caramel frappe',100,120],['Nutella frappe',90,110]
+    ]},
+    {id:'tea', en:'Tea & Herbs', ar:'الشاي والأعشاب', cols:['Price'], items:[
+      ['Red tea',20],['Flavored tea',30],['Milk tea',30],['Karrak tea',45],['Mint tea',25],['Anise',25]
+    ]},
+    {id:'cold', en:'Cold Beverages', ar:'مشروبات باردة', cols:['S','L'], items:[
+      ['Smoothies',100,120],['Cherry cola',null,80],['Rush summer drink',130,150],
+      ['Mojito',null,95],['Milk shake',100,120]
+    ]},
+    {id:'bakery', en:'Bakery', ar:'مخبوزات', cols:['Price'], items:[
+      ['Croissant plain',45],['Croissant cheese',65],['Patte plain',40],['Patte cheese',60],
+      ['Cookies plain',40],['Cookies stuffed',60],['Brownies',55]
+    ]},
+    {id:'extras', en:'Extras', ar:'إضافات', cols:['Price'], items:[
+      ['Espresso shot',35],['Milk',25],['Flavour syrup',20],['Whipped cream',25],
+      ['Sauces',25],['Nutella/Lotus',40],['Oreo',25]
+    ]}
+  ];
+  let lang='en', active='coffee';
+  const T={ price_en:'Price', price_ar:'السعر', note_en:'Prices in EGP', note_ar:'الأسعار بالجنيه المصري' };
+  function fmt(v){ return v==null ? '-' : v; }
+  function renderTabs(){
+    const c=document.getElementById('tabs'); c.innerHTML='';
+    MENU.forEach(cat=>{
+      const b=document.createElement('button');
+      b.className='tab'+(cat.id===active?' on':'');
+      b.textContent = lang==='en'?cat.en:cat.ar;
+      b.onclick=()=>{active=cat.id;renderTabs();renderBoard();};
+      c.appendChild(b);
+    });
+  }
+  function renderBoard(){
+    const cat=MENU.find(c=>c.id===active);
+    document.getElementById('boardCat').textContent = lang==='en'?cat.en:cat.ar;
+    const twoCols = cat.cols.length>1;
+    const ch=document.getElementById('colHead');
+    if(twoCols){ ch.innerHTML='<span>S</span><span>L</span>'; ch.style.display='flex'; }
+    else { ch.textContent = lang==='en'?T.price_en:T.price_ar; ch.style.display='block'; }
+    const rowsEl=document.getElementById('rows');
+    rowsEl.className='rows'+(cat.items.length>6?' two':'');
+    rowsEl.innerHTML='';
+    cat.items.forEach(it=>{
+      const r=document.createElement('div'); r.className='row';
+      if(twoCols){
+        r.innerHTML='<span class="name">'+it[0]+'</span><span class="dots"></span>'+
+          '<span class="prices"><b class="'+(it[1]==null?'na':'')+'">'+fmt(it[1])+'</b>'+
+          '<b class="l">'+fmt(it[2])+'</b></span>';
+      } else {
+        r.innerHTML='<span class="name">'+it[0]+'</span><span class="dots"></span>'+
+          '<span class="prices"><b class="l">'+fmt(it[1])+'</b></span>';
+      }
+      rowsEl.appendChild(r);
+    });
+    document.getElementById('boardNote').textContent = lang==='en'?T.note_en:T.note_ar;
+  }
+  function applyLang(){
+    document.querySelectorAll('[data-en]').forEach(el=>{
+      el.textContent = lang==='en'?el.getAttribute('data-en'):el.getAttribute('data-ar');
+    });
+    document.documentElement.lang = lang;
+    document.documentElement.dir = lang==='en'?'ltr':'rtl';
+    document.getElementById('lang').textContent = lang==='en'?'العربية':'English';
+    renderTabs(); renderBoard();
+  }
+  document.getElementById('lang').onclick=()=>{ lang=lang==='en'?'ar':'en'; applyLang(); };
+  renderTabs(); renderBoard();
+</script>

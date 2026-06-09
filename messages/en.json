@@ -1,0 +1,84 @@
+{
+  "nav": {
+    "menu": "Menu",
+    "findUs": "Find us",
+    "about": "About",
+    "careers": "Careers"
+  },
+  "hero": {
+    "eyebrow": "Grab. Go. Rush.",
+    "heading1": "Good coffee,",
+    "heading2": "ready when you are.",
+    "lede": "Fresh coffee, fresh baked goods, and the daily essentials you need. Open around the clock, right where you are.",
+    "ctaMenu": "View the menu",
+    "ctaFind": "Find us"
+  },
+  "statement": {
+    "eyebrow": "Egypt's coffee and convenience brand",
+    "heading1": "Fresh coffee and daily essentials, made ",
+    "heading2": "fast.",
+    "chip1": "Open 24/7",
+    "chip2": "Freshly brewed",
+    "chip3": "Quality you can taste"
+  },
+  "menuSection": {
+    "heading1": "The ",
+    "heading2": "Menu",
+    "eyebrow": "Coffee, iced, frappe, bakery and more",
+    "priceLabel": "Price",
+    "note": "Prices in EGP",
+    "colS": "S",
+    "colL": "L"
+  },
+  "loc": {
+    "heading1": "Open ",
+    "heading2": "24/7",
+    "heading3": ", come find us.",
+    "body": "Our store is open around the clock. Tap below for directions on Google Maps.",
+    "cta": "Find us"
+  },
+  "footer": {
+    "tagline": "Grab. Go. Rush. · concept preview"
+  },
+  "langToggle": "العربية",
+  "pages": {
+    "home": {
+      "title": "Rush Mart",
+      "description": "Fresh coffee and daily essentials, open 24/7 in Egypt."
+    },
+    "menu": {
+      "title": "Menu - Rush Mart",
+      "description": "Browse the full Rush Mart menu. Coffee, iced drinks, frappes, bakery and more.",
+      "heading": "The Menu",
+      "eyebrow": "Coffee, iced, frappe, bakery and more"
+    },
+    "about": {
+      "title": "About - Rush Mart",
+      "description": "Learn about Rush Mart, Egypt's coffee and convenience brand.",
+      "eyebrow": "Egypt's coffee and convenience brand",
+      "heading": "Built for people on the move.",
+      "body1": "Rush Mart started with a simple idea: great coffee should not be hard to get. We set out to build a place where every cup is brewed fresh, every item on the shelf is exactly what you need, and the whole experience is fast enough to fit into any schedule.",
+      "body2": "We are a convenience brand. That means we think about your morning commute, your late-night study session, and the moment between meetings when you just need something good. Our menu is straightforward, our prices are honest, and our doors are always open.",
+      "body3": "Quality ingredients, trained baristas, and a commitment to consistency. That is what Rush Mart is built on."
+    },
+    "careers": {
+      "title": "Careers - Rush Mart",
+      "description": "Join the Rush Mart team.",
+      "eyebrow": "Join the team",
+      "heading": "We are growing.",
+      "body": "Rush Mart is expanding and we are always looking for people who take pride in their work. If you are interested in joining the team, send us a message at the address below.",
+      "email": "careers@rushmart.eg",
+      "note": "We will be in touch if there is a good fit."
+    },
+    "contact": {
+      "title": "Contact - Rush Mart",
+      "description": "Get in touch with Rush Mart.",
+      "eyebrow": "Get in touch",
+      "heading": "We are here, always.",
+      "body": "Our store is open around the clock. Stop by any time, or reach out using the details below.",
+      "findUs": "Find us on Google Maps",
+      "hours": "Open 24 hours, 7 days a week.",
+      "email": "hello@rushmart.eg"
+    }
+  }
+}
