@@ -177,6 +177,7 @@ nav {
   transition: .3s;
   border: none;
   font-family: var(--body);
+  white-space: nowrap;
 }
 
 .pill-red {
@@ -250,7 +251,7 @@ header {
 
 .hero-cup {
   width: 100%;
-  transform: rotate(-45deg);
+  transform: rotate(-30deg);
   filter: drop-shadow(0 16px 48px rgba(200, 32, 27, 0.3));
 }
 
