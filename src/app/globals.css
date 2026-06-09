@@ -251,7 +251,7 @@ header {
 
 .hero-art {
   flex: 0 0 auto;
-  width: min(380px, 38vw);
+  width: min(320px, 34vw);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -260,17 +260,6 @@ header {
 .hero-cup {
   width: 100%;
   height: auto;
-  transform: rotate(-25deg);
-  border-radius: 20px;
-  /* dissolve the red background into the hero on both light and dark */
-  -webkit-mask-image: radial-gradient(ellipse 78% 86% at 50% 54%, black 40%, transparent 100%);
-  mask-image: radial-gradient(ellipse 78% 86% at 50% 54%, black 40%, transparent 100%);
-}
-
-@media (max-width: 768px) {
-  .hero-cup {
-    transform: rotate(-10deg);
-  }
 }
 
 @media (max-width: 768px) {
