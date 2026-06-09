@@ -228,7 +228,7 @@ html[dir="rtl"] .pill:hover .arrow {
 /* Hero */
 header {
   position: relative;
-  padding: clamp(70px, 11vw, 150px) 0 clamp(60px, 8vw, 110px);
+  padding: clamp(40px, 4vw, 64px) 0 clamp(40px, 4vw, 64px);
   overflow: hidden;
 }
 
