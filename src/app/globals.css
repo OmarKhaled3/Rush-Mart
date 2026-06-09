@@ -250,16 +250,15 @@ header {
 }
 
 .hero-art {
-  flex: 0 0 auto;
-  width: min(400px, 38vw);
+  flex-shrink: 0;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
 }
 
 .hero-cup {
-  width: 100%;
-  height: auto;
+  width: auto;
+  height: clamp(280px, 42vh, 480px);
   transform: rotate(-7deg);
 }
 
@@ -279,7 +278,10 @@ header {
 
   .hero-art {
     order: 2;
-    width: min(180px, 56vw);
+  }
+
+  .hero-cup {
+    height: clamp(200px, 40vw, 280px);
   }
 }
 
