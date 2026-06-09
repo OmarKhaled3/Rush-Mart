@@ -9,9 +9,9 @@ export default function CupIllustration({ className }: { className?: string }) {
     >
       <defs>
         <linearGradient id="cup-body" x1="0" y1="0" x2="1" y2="0">
-          <stop offset="0%" stopColor="#881411" />
-          <stop offset="38%" stopColor="#C8201B" />
-          <stop offset="100%" stopColor="#6e1010" />
+          <stop offset="0%" stopColor="#6e1010" />
+          <stop offset="42%" stopColor="#C8201B" />
+          <stop offset="100%" stopColor="#8B3200" />
         </linearGradient>
         <linearGradient id="cup-sleeve" x1="0" y1="0" x2="1" y2="0">
           <stop offset="0%" stopColor="#0A0908" />
@@ -19,12 +19,12 @@ export default function CupIllustration({ className }: { className?: string }) {
           <stop offset="100%" stopColor="#0A0908" />
         </linearGradient>
         <linearGradient id="cup-lid" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stopColor="#F7F3EC" />
-          <stop offset="100%" stopColor="#D4CABА" />
+          <stop offset="0%" stopColor="#F5E9C0" />
+          <stop offset="100%" stopColor="#C8A84A" />
         </linearGradient>
         <linearGradient id="cup-gleam" x1="0" y1="0" x2="1" y2="0">
-          <stop offset="0%" stopColor="white" stopOpacity="0.2" />
-          <stop offset="100%" stopColor="white" stopOpacity="0" />
+          <stop offset="0%" stopColor="#F5C830" stopOpacity="0.18" />
+          <stop offset="100%" stopColor="#F5C830" stopOpacity="0" />
         </linearGradient>
         <linearGradient id="straw-grad" x1="0" y1="0" x2="1" y2="0">
           <stop offset="0%" stopColor="#1B1813" />
@@ -36,9 +36,9 @@ export default function CupIllustration({ className }: { className?: string }) {
       {/* Straw */}
       <rect x="96" y="20" width="8" height="68" rx="4" fill="url(#straw-grad)" />
       {/* Straw stripe */}
-      <rect x="96" y="20" width="8" height="12" rx="4" fill="#C8201B" />
-      <rect x="96" y="44" width="8" height="8" fill="#C8201B" />
-      <rect x="96" y="68" width="8" height="8" fill="#C8201B" />
+      <rect x="96" y="20" width="8" height="12" rx="4" fill="#D99000" />
+      <rect x="96" y="44" width="8" height="8" fill="#D99000" />
+      <rect x="96" y="68" width="8" height="8" fill="#D99000" />
 
       {/* Cup body */}
       <path
@@ -55,37 +55,37 @@ export default function CupIllustration({ className }: { className?: string }) {
       {/* Gold bolt on sleeve */}
       <path
         d="M 104 170 L 90 192 Q 89 195 92 195 L 100 195 L 96 208 Q 95 211 98 209 L 114 186 Q 115 183 112 183 L 104 183 L 107 171 Q 108 168 105 170 Z"
-        fill="#D99000"
+        fill="#E8A800"
       />
 
       {/* Lid ring */}
       <path
         d="M 15 84 Q 100 77 185 84 L 183 74 Q 100 66 17 74 Z"
-        fill="#BFB09C"
+        fill="#A88430"
       />
 
       {/* Lid dome */}
       <path
         d="M 17 74 Q 100 64 183 74 L 176 58 Q 100 46 24 58 Z"
-        fill="#EDE7DA"
+        fill="url(#cup-lid)"
       />
 
       {/* Dome upper curve */}
       <path
         d="M 24 58 Q 100 46 176 58 L 168 48 Q 100 35 32 48 Z"
-        fill="#F2EDE4"
+        fill="#F0E090"
       />
 
       {/* Dome peak */}
       <path
         d="M 32 48 Q 100 34 168 48 L 160 42 Q 100 28 40 42 Z"
-        fill="#F7F3EC"
+        fill="#F5E9B0"
       />
 
       {/* Drink port */}
       <path
         d="M 83 42 Q 100 38 117 42 L 115 46 Q 100 43 85 46 Z"
-        fill="#C4B6A0"
+        fill="#9A7820"
       />
 
       {/* Gleam on left of cup body */}
@@ -97,8 +97,8 @@ export default function CupIllustration({ className }: { className?: string }) {
       {/* Subtle shine on lid */}
       <path
         d="M 30 54 Q 60 44 90 48 Q 60 48 32 58 Z"
-        fill="white"
-        opacity="0.25"
+        fill="#FFFBE0"
+        opacity="0.5"
       />
 
       {/* Bottom ellipse (depth) */}
