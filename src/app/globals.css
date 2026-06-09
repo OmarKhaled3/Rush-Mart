@@ -227,21 +227,46 @@ header {
   overflow: hidden;
 }
 
-.hero-bolt {
-  position: absolute;
-  top: 50%;
-  inset-inline-end: -4%;
-  transform: translateY(-50%);
-  width: min(560px, 52vw);
-  opacity: .06;
-  color: var(--red);
-  pointer-events: none;
-}
-
-.hero-grid {
+.hero-split {
   position: relative;
   z-index: 2;
-  max-width: 860px;
+  display: flex;
+  align-items: center;
+  gap: clamp(32px, 6vw, 80px);
+}
+
+.hero-copy {
+  flex: 1;
+  min-width: 0;
+}
+
+.hero-art {
+  flex: 0 0 auto;
+  width: min(380px, 38vw);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-cup {
+  width: 100%;
+  transform: rotate(-45deg);
+  filter: drop-shadow(0 16px 48px rgba(200, 32, 27, 0.3));
+}
+
+@media (max-width: 768px) {
+  .hero-split {
+    flex-direction: column;
+  }
+
+  .hero-copy {
+    order: 1;
+  }
+
+  .hero-art {
+    order: 2;
+    width: min(180px, 56vw);
+  }
 }
 
 h1 {
