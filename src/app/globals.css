@@ -261,8 +261,18 @@ header {
 
 .hero-cup {
   width: 100%;
+  height: auto;
   transform: rotate(-20deg);
-  filter: drop-shadow(0 16px 48px rgba(200, 32, 27, 0.3));
+  border-radius: 16px;
+  box-shadow:
+    0 24px 64px rgba(0, 0, 0, 0.28),
+    0 8px 24px rgba(0, 0, 0, 0.16);
+}
+
+@media (max-width: 768px) {
+  .hero-cup {
+    transform: rotate(-8deg);
+  }
 }
 
 @media (max-width: 768px) {

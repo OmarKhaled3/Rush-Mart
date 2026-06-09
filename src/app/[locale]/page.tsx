@@ -1,8 +1,8 @@
+import Image from 'next/image';
 import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import { ArrowIcon } from '@/components/icons';
 import MenuBoard from '@/components/MenuBoard';
-import CupIllustration from '@/components/CupIllustration';
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -50,7 +50,14 @@ export default async function HomePage({ params }: Props) {
               </div>
             </div>
             <div className="hero-art rise d3">
-              <CupIllustration className="hero-cup" />
+              <Image
+                src="/images/hero-cup.jpg"
+                alt="Rush Mart coffee cup with fresh espresso"
+                width={520}
+                height={600}
+                priority
+                className="hero-cup"
+              />
             </div>
           </div>
         </div>
