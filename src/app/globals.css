@@ -251,7 +251,7 @@ header {
 
 .hero-art {
   flex: 0 0 auto;
-  width: min(320px, 34vw);
+  width: min(460px, 44vw);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -260,6 +260,7 @@ header {
 .hero-cup {
   width: 100%;
   height: auto;
+  transform: rotate(12deg);
 }
 
 @media (max-width: 768px) {
