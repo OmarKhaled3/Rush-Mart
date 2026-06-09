@@ -251,7 +251,7 @@ header {
 
 .hero-cup {
   width: 100%;
-  transform: rotate(-30deg);
+  transform: rotate(-20deg);
   filter: drop-shadow(0 16px 48px rgba(200, 32, 27, 0.3));
 }
 

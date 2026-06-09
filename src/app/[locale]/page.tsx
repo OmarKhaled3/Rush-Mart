@@ -39,7 +39,7 @@ export default async function HomePage({ params }: Props) {
                   <ArrowIcon className="arrow" />
                 </Link>
                 <a
-                  href="https://maps.google.com/?q=Rush+Mart"
+                  href="https://maps.app.goo.gl/i4Ge3ruJBAjbMAkc9?g_st=ic"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="pill pill-ghost"
@@ -85,7 +85,7 @@ export default async function HomePage({ params }: Props) {
               <p>{t('loc.body')}</p>
             </div>
             <a
-              href="https://maps.google.com/?q=Rush+Mart"
+              href="https://maps.app.goo.gl/i4Ge3ruJBAjbMAkc9?g_st=ic"
               target="_blank"
               rel="noopener noreferrer"
               className="pill pill-red"
