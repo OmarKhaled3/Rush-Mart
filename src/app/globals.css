@@ -236,7 +236,7 @@ header {
   position: relative;
   z-index: 2;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: clamp(32px, 6vw, 80px);
 }
 
@@ -260,7 +260,7 @@ header {
 .hero-cup {
   width: 100%;
   height: auto;
-  transform: rotate(-8deg);
+  transform: rotate(-7deg);
 }
 
 /* Scale the headline down slightly so it breaks cleanly in the two-column layout */
