@@ -243,8 +243,6 @@ header {
 .hero-copy {
   flex: 1;
   min-width: 0;
-  border-inline-start: 5px solid var(--gold);
-  padding-inline-start: clamp(20px, 3vw, 36px);
 }
 
 .hero-copy .eyebrow {
