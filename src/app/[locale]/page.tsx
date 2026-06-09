@@ -51,10 +51,10 @@ export default async function HomePage({ params }: Props) {
             </div>
             <div className="hero-art rise d3">
               <Image
-                src="/images/hero-cup.jpeg"
+                src="/images/hero-cup.png"
                 alt="Rush Mart coffee cup with fresh espresso"
                 width={520}
-                height={600}
+                height={584}
                 priority
                 className="hero-cup"
               />
