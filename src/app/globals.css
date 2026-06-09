@@ -260,7 +260,7 @@ header {
 .hero-cup {
   width: 100%;
   height: auto;
-  transform: rotate(-12deg);
+  transform: rotate(-8deg);
 }
 
 /* Scale the headline down slightly so it breaks cleanly in the two-column layout */
