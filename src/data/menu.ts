@@ -60,7 +60,7 @@ export const menuData: MenuCategory[] = [
     type: 'two-col',
     items: [
       { en: 'Hot chocolate', ar: 'شوكولاتة ساخنة', small: 80, large: 100, price: null },
-      { en: 'White cocoa', ar: 'كاكاو أبيض', small: 80, large: 100, price: null },
+      { en: 'White chocolate', ar: 'شوكولاتة بيضاء', small: 80, large: 100, price: null },
       { en: 'Matcha', ar: 'ماتشا', small: 80, large: 100, price: null },
       { en: 'Honey matcha', ar: 'ماتشا بالعسل', small: 90, large: 110, price: null },
       { en: 'Spanish matcha', ar: 'ماتشا إسباني', small: 110, large: 130, price: null },
