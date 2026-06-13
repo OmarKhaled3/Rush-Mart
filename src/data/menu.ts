@@ -97,6 +97,33 @@ export const menuData: MenuCategory[] = [
     ],
   },
   {
+    id: 'fresh-juices',
+    en: 'Fresh Juices',
+    ar: 'عصائر طبيعية',
+    type: 'single',
+    items: [
+      { en: 'Oranges', ar: 'برتقال', small: null, large: null, price: 80 },
+      { en: 'Mango', ar: 'مانجو', small: null, large: null, price: 80 },
+      { en: 'Lemon', ar: 'ليمون', small: null, large: null, price: 80 },
+      { en: 'Guava', ar: 'جوافة', small: null, large: null, price: 80 },
+      { en: 'Strawberry', ar: 'فراولة', small: null, large: null, price: 90 },
+      { en: 'Watermelon', ar: 'بطيخ', small: null, large: null, price: 110 },
+    ],
+  },
+  {
+    id: 'fruit-punch',
+    en: 'Fruit Punch',
+    ar: 'عصائر فواكه',
+    type: 'single',
+    items: [
+      { en: 'Peach Mango', ar: 'خوخ مانجو', small: null, large: null, price: 140 },
+      { en: 'Kiwi Mango', ar: 'كيوي مانجو', small: null, large: null, price: 130 },
+      { en: 'Passion Orange', ar: 'باشن اورنج', small: null, large: null, price: 150 },
+      { en: 'Pina Colada Guava', ar: 'بينا كولادا جوافة', small: null, large: null, price: 140 },
+      { en: 'Vanilla Ice Guava', ar: 'فانيلا آيس جوافة', small: null, large: null, price: 170 },
+    ],
+  },
+  {
     id: 'cold-beverages',
     en: 'Cold Beverages',
     ar: 'مشروبات باردة',
