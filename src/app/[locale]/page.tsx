@@ -3,6 +3,7 @@ import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import { ArrowIcon } from '@/components/icons';
 import MenuBoard from '@/components/MenuBoard';
+import OffersSection from '@/components/OffersSection';
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -11,6 +12,13 @@ type Props = {
 export default async function HomePage({ params }: Props) {
   const { locale } = await params;
   const t = await getTranslations({ locale });
+
+  const offersTranslations = {
+    eyebrow: t('offersSection.eyebrow'),
+    heading1: t('offersSection.heading1'),
+    heading2: t('offersSection.heading2'),
+    egp: t('offersSection.egp'),
+  };
 
   const menuTranslations = {
     priceLabel: t('menuSection.priceLabel'),
@@ -62,6 +70,9 @@ export default async function HomePage({ params }: Props) {
           </div>
         </div>
       </header>
+
+      {/* Summer Offers */}
+      <OffersSection locale={locale} {...offersTranslations} />
 
       {/* Menu section */}
       <section className="menu" id="menu">
