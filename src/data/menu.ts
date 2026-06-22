@@ -73,7 +73,7 @@ export const menuData: MenuCategory[] = [
     type: 'two-col',
     items: [
       { en: 'Latte', ar: 'لاتيه', small: 80, large: 100, price: null },
-      { en: 'Latte flavour', ar: 'لاتيه بنكهة', small: 90, large: 110, price: null },
+      { en: 'Latte flavour', ar: 'لاتيه بنكهة', small: 80, large: 110, price: null },
       { en: 'Double espresso', ar: 'إسبريسو دبل', small: 70, large: 90, price: null },
       { en: 'Mocha', ar: 'موكا', small: 110, large: 130, price: null },
       { en: 'White mocha', ar: 'موكا أبيض', small: 80, large: 100, price: null },
@@ -103,11 +103,11 @@ export const menuData: MenuCategory[] = [
     type: 'single',
     items: [
       { en: 'Oranges', ar: 'برتقال', small: null, large: null, price: 80 },
-      { en: 'Mango', ar: 'مانجو', small: null, large: null, price: 80 },
+      { en: 'Mango', ar: 'مانجو', small: null, large: null, price: 90 },
       { en: 'Lemon', ar: 'ليمون', small: null, large: null, price: 80 },
-      { en: 'Guava', ar: 'جوافة', small: null, large: null, price: 80 },
+      { en: 'Guava', ar: 'جوافة', small: null, large: null, price: 90 },
       { en: 'Strawberry', ar: 'فراولة', small: null, large: null, price: 90 },
-      { en: 'Watermelon', ar: 'بطيخ', small: null, large: null, price: 110 },
+      { en: 'Watermelon', ar: 'بطيخ', small: null, large: null, price: 100 },
     ],
   },
   {
