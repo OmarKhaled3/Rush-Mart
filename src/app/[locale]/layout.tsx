@@ -5,6 +5,7 @@ import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
+import { Analytics } from '@vercel/analytics/next';
 import '@/app/globals.css';
 
 type Props = {
@@ -56,6 +57,7 @@ export default async function LocaleLayout({ children, params }: Props) {
           <main>{children}</main>
           <Footer />
         </NextIntlClientProvider>
+        <Analytics />
       </body>
     </html>
   );
