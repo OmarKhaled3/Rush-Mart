@@ -27,7 +27,7 @@ export default function Nav() {
           <div className="nav-links">
             <Link href="/menu">{t('nav.menu')}</Link>
             <a
-              href="https://maps.app.goo.gl/i4Ge3ruJBAjbMAkc9?g_st=ic"
+              href="https://maps.app.goo.gl/kfQFfU2qATDcArrN8"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -42,7 +42,7 @@ export default function Nav() {
               {t('langToggle')}
             </button>
             <a
-              href="https://maps.app.goo.gl/i4Ge3ruJBAjbMAkc9?g_st=ic"
+              href="https://maps.app.goo.gl/kfQFfU2qATDcArrN8"
               target="_blank"
               rel="noopener noreferrer"
               className="pill pill-red"
