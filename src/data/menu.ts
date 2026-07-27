@@ -152,7 +152,7 @@ export const menuData: MenuCategory[] = [
       { en: 'Patte plain', ar: 'باتيه سادة', small: null, large: null, price: 70 },
       { en: 'Danish cinnamon', ar: 'دانش قرفة', small: null, large: null, price: 60 },
       { en: 'Danish fruit', ar: 'دانش فاكهة', small: null, large: null, price: 60 },
-      { en: 'Cookies chip', ar: 'كوكيز شيب', small: null, large: null, price: 70 },
+      { en: 'Cookies plain', ar: 'كوكيز سادة', small: null, large: null, price: 70 },
       { en: 'Cookies double', ar: 'كوكيز دبل', small: null, large: null, price: 70 },
       { en: 'Cookies nutella', ar: 'كوكيز نوتيلا', small: null, large: null, price: 70 },
       { en: 'Cookies lotus', ar: 'كوكيز لوتس', small: null, large: null, price: 70 },
