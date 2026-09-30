@@ -39,7 +39,7 @@ export default async function ContactPage({ params }: Props) {
             </p>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
               <a
-                href="https://maps.app.goo.gl/i4Ge3ruJBAjbMAkc9?g_st=ic"
+                href="https://maps.app.goo.gl/kfQFfU2qATDcArrN8"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="pill pill-red"
