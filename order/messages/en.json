@@ -1,0 +1,23 @@
+{
+  "Meta": {
+    "title": "Order ahead",
+    "description": "Order ahead and pick up at the counter."
+  },
+  "Common": {
+    "switchLocale": "عربي",
+    "switchLocaleLabel": "التبديل إلى العربية",
+    "openNow": "Open now",
+    "closedNow": "Closed now",
+    "orderingPaused": "Ordering is paused for a few minutes"
+  },
+  "Home": {
+    "heading": "Order ahead. Skip the wait.",
+    "subheading": "Pick your drink, we'll have it ready at the counter.",
+    "browseMenu": "Browse the menu",
+    "comingSoon": "The menu is on its way."
+  },
+  "NotFound": {
+    "title": "Page not found",
+    "back": "Back to the menu"
+  }
+}

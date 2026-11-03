@@ -1,0 +1,23 @@
+{
+  "Meta": {
+    "title": "اطلب مسبقًا",
+    "description": "اطلب من قبلها واستلم من الكاونتر."
+  },
+  "Common": {
+    "switchLocale": "English",
+    "switchLocaleLabel": "Switch to English",
+    "openNow": "مفتوح دلوقتي",
+    "closedNow": "مقفول دلوقتي",
+    "orderingPaused": "الطلبات واقفة كام دقيقة"
+  },
+  "Home": {
+    "heading": "اطلب من قبلها. ومتستناش.",
+    "subheading": "اختار مشروبك، وهيكون جاهز على الكاونتر.",
+    "browseMenu": "شوف المنيو",
+    "comingSoon": "المنيو جاي في السكة."
+  },
+  "NotFound": {
+    "title": "الصفحة مش موجودة",
+    "back": "ارجع للمنيو"
+  }
+}
