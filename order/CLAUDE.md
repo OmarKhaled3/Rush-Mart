@@ -2,7 +2,7 @@
 
 Multi-tenant order-ahead PWA. Rush Mart is tenant #1, served at `order.rushmart-eg.com`.
 This app is fully independent of the marketing site in the repo root: never import from `../`.
-The approved plan lives in the PR / session history; the rules below always apply.
+The approved plan is `docs/plan.md`; the rules below always apply.
 
 ## Rules
 - **Tenancy:** every table carries `tenant_id`; RLS enforces isolation. The tenant comes from
@@ -25,4 +25,4 @@ The approved plan lives in the PR / session history; the rules below always appl
   client JS small; no UI component libraries.
 
 ## Commands
-`npm run dev` · `npm run lint` · `npm run typecheck` · `npm test`
+`npm run dev` · `npm run lint` · `npm run typecheck` · `npm test` · `npm run test:db` (needs `npm run db:start`) · `npm run db:reset` · `npm run db:types` after any migration
