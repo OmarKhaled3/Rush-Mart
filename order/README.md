@@ -67,4 +67,17 @@ check the caller's role (`place_order`, `mark_outside`, `set_order_status`, `set
 
 The menu is edited in the Supabase dashboard (or `supabase/seed/rushmart-menu.ts` + reseed) in v1.
 
+## Previewing from another device (local stack)
+
+To open a locally running app from a phone or a tunnel URL, build with:
+
+```bash
+TENANT_FALLBACK_ALL_HOSTS=true NEXT_PUBLIC_SUPABASE_BROWSER_URL=/sb \
+SUPABASE_PROXY_TARGET=http://127.0.0.1:54321 npm run build
+PORT=3000 npm start
+```
+
+Any hostname then serves the default tenant, and the browser reaches local Supabase through
+`/sb` on the app's own origin. Never set these on Vercel.
+
 Hosted setup and Vercel deploy steps land with the final milestone.

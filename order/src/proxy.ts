@@ -29,6 +29,7 @@ export default async function proxy(request: NextRequest) {
 }
 
 export const config = {
-  // Everything except Next internals and files with an extension (images, sw.js, ...).
-  matcher: ['/((?!_next|_vercel|.*\\..*).*)'],
+  // Everything except Next internals, the optional /sb Supabase pass-through, and files with an
+  // extension (images, sw.js, ...).
+  matcher: ['/((?!_next|_vercel|sb/|.*\\..*).*)'],
 };

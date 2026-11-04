@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import { hasLocale, NextIntlClientProvider } from 'next-intl';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { localeDir, routing } from '@/i18n/routing';
+import { CartProvider } from '@/lib/cart/context';
 import { getTenant, tenantName } from '@/lib/tenant/get-tenant';
 import { tenantThemeCss } from '@/lib/tenant/theme';
 import '../globals.css';
@@ -66,7 +67,9 @@ export default async function LocaleLayout({ children, params }: Props) {
         <style dangerouslySetInnerHTML={{ __html: tenantThemeCss(tenant.theme) }} />
       </head>
       <body className="antialiased">
-        <NextIntlClientProvider>{children}</NextIntlClientProvider>
+        <NextIntlClientProvider>
+          <CartProvider tenantSlug={tenant.slug}>{children}</CartProvider>
+        </NextIntlClientProvider>
       </body>
     </html>
   );

@@ -58,6 +58,14 @@ export function postgrestDomainLookup(url: string, apiKey: string): DomainLookup
 }
 
 /**
+ * TENANT_FALLBACK_ALL_HOSTS=true lets any unknown host use the default tenant. Meant for local
+ * previews behind a tunnel; always ignored on Vercel production.
+ */
+export function fallbackForAllHosts(env: Record<string, string | undefined> = process.env): boolean {
+  return env.TENANT_FALLBACK_ALL_HOSTS === 'true' && env.VERCEL_ENV !== 'production';
+}
+
+/**
  * Hostname -> tenant slug, or null when the host belongs to no tenant.
  * localhost and *.vercel.app previews fall back to `defaultSlug` when the host is not registered.
  */
@@ -65,6 +73,7 @@ export async function resolveTenantSlug(
   rawHost: string | null | undefined,
   lookup: DomainLookup,
   defaultSlug: string | undefined = process.env.DEFAULT_TENANT_SLUG,
+  anyHost: boolean = fallbackForAllHosts(),
 ): Promise<string | null> {
   const host = normalizeHost(rawHost);
   if (!host) return null;
@@ -72,6 +81,6 @@ export async function resolveTenantSlug(
   const mapped = await lookup(host);
   if (mapped) return mapped;
 
-  if (isDevOrPreviewHost(host) && defaultSlug) return defaultSlug;
+  if ((anyHost || isDevOrPreviewHost(host)) && defaultSlug) return defaultSlug;
   return null;
 }

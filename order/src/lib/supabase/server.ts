@@ -3,12 +3,13 @@ import { createServerClient } from '@supabase/ssr';
 import { createClient } from '@supabase/supabase-js';
 import { cookies } from 'next/headers';
 import type { Database } from './database.types';
-import { supabasePublishableKey, supabaseUrl } from './env';
+import { AUTH_COOKIE_NAME, supabasePublishableKey, supabaseUrl } from './env';
 
 /** Server client acting as the signed-in user (cookies). Use in Server Components and Actions. */
 export async function createSupabaseServerClient() {
   const cookieStore = await cookies();
   return createServerClient<Database>(supabaseUrl(), supabasePublishableKey(), {
+    cookieOptions: { name: AUTH_COOKIE_NAME },
     cookies: {
       getAll: () => cookieStore.getAll(),
       setAll: (toSet) => {

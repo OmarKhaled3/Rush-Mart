@@ -130,7 +130,8 @@ the hourly chart, and a top items list. No chart library.
      one staff user taken from env
    - DB tests, including that staff cannot read insights or change settings
    - the tenant lookup switches to the database
-3. Customer menu, item sheet, cart and ASAP checkout via `place_order` with Turnstile.
+   **Done.**
+3. Customer menu, item sheet, cart and ASAP checkout via `place_order` with Turnstile. **Done.**
 4. Live status page with the ready alert and "I'm outside".
 5. Staff auth, the Realtime queue with sounds, status actions and pause ordering.
 6. Stock toggles.

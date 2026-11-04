@@ -1,11 +1,11 @@
 import { createServerClient } from '@supabase/ssr';
 import type { NextRequest, NextResponse } from 'next/server';
 import type { Database } from './database.types';
-import { supabasePublishableKey, supabaseUrl } from './env';
+import { AUTH_COOKIE_NAME, supabasePublishableKey, supabaseUrl } from './env';
 
-/** Supabase stores its session in cookies named `sb-<project>-auth-token[.N]`. */
+/** The session lives in `${AUTH_COOKIE_NAME}` (chunked as `.0`, `.1`, ... when large). */
 export function hasSupabaseSession(request: NextRequest): boolean {
-  return request.cookies.getAll().some((c) => c.name.startsWith('sb-') && c.name.includes('-auth-token'));
+  return request.cookies.getAll().some((c) => c.name === AUTH_COOKIE_NAME || c.name.startsWith(`${AUTH_COOKIE_NAME}.`));
 }
 
 /**
@@ -16,6 +16,7 @@ export async function refreshSupabaseSession(request: NextRequest, response: Nex
   if (!hasSupabaseSession(request)) return;
 
   const supabase = createServerClient<Database>(supabaseUrl(), supabasePublishableKey(), {
+    cookieOptions: { name: AUTH_COOKIE_NAME },
     cookies: {
       getAll: () => request.cookies.getAll(),
       setAll: (toSet, headers) => {

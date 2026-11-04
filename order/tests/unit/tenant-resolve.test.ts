@@ -1,5 +1,5 @@
 import { describe, expect, it, vi } from 'vitest';
-import { cachedLookup, normalizeHost, resolveTenantSlug, type DomainLookup } from '@/lib/tenant/resolve';
+import { cachedLookup, fallbackForAllHosts, normalizeHost, resolveTenantSlug, type DomainLookup } from '@/lib/tenant/resolve';
 
 const domains: Record<string, string> = { 'order.rushmart-eg.com': 'rushmart' };
 const fakeLookup: DomainLookup = async (host) => domains[host] ?? null;
@@ -27,7 +27,13 @@ describe('resolveTenantSlug', () => {
     expect(await resolveTenantSlug('rush-order-git-x.vercel.app', fakeLookup, 'rushmart')).toBe('rushmart');
   });
   it('does not fall back on unknown production hosts', async () => {
-    expect(await resolveTenantSlug('evil.example.com', fakeLookup, 'rushmart')).toBeNull();
+    expect(await resolveTenantSlug('evil.example.com', fakeLookup, 'rushmart', false)).toBeNull();
+  });
+  it('falls back for any host only when explicitly allowed', async () => {
+    expect(await resolveTenantSlug('tunnel.example.dev', fakeLookup, 'rushmart', true)).toBe('rushmart');
+    expect(fallbackForAllHosts({ TENANT_FALLBACK_ALL_HOSTS: 'true' })).toBe(true);
+    expect(fallbackForAllHosts({ TENANT_FALLBACK_ALL_HOSTS: 'true', VERCEL_ENV: 'production' })).toBe(false);
+    expect(fallbackForAllHosts({})).toBe(false);
   });
   it('returns null on localhost when no default is configured', async () => {
     expect(await resolveTenantSlug('localhost:3000', fakeLookup, undefined)).toBeNull();
