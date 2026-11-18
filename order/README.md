@@ -80,4 +80,4 @@ PORT=3000 npm start
 Any hostname then serves the default tenant, and the browser reaches local Supabase through
 `/sb` on the app's own origin. Never set these on Vercel.
 
-Hosted setup and Vercel deploy steps land with the final milestone.
+Hosted setup and Vercel deploy steps: [`docs/deploy.md`](docs/deploy.md).
